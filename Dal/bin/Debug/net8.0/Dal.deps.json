@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "Dal/1.0.0": {
+      "DAL/1.0.0": {
         "runtime": {
-          "Dal.dll": {}
+          "DAL.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Dal/1.0.0": {
+    "DAL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\Dal.csproj": {
-                "projectPath": "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\Dal.csproj"
+              "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\DAL.csproj": {
+                "projectPath": "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\DAL.csproj"
               }
             }
           }
@@ -72,12 +72,12 @@
         }
       }
     },
-    "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\Dal.csproj": {
+    "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\Dal.csproj",
-        "projectName": "Dal",
-        "projectPath": "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\Dal.csproj",
+        "projectUniqueName": "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\DAL.csproj",
         "packagesPath": "C:\\Users\\077764842\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\obj\\",
         "projectStyle": "PackageReference",

@@ -1,49 +1,60 @@
-﻿using System.Linq.Expressions;
+﻿using BLL;
 
-namespace Dal
+namespace StoreStatistics
 {
     class Program
     {
-        public static EnumStatistics.Statistics Statistics;
-        private static string Str;
-        private static List<string> StrList;
+        private static Statistics Statistics;
+        private static string? Str;
+        private static List<string>? StrList;
         static void Main(string[] args)
         {
             while (true)
             {
                 Console.WriteLine("Введите данные в таком формате: < что_рассчитать > < ID товара > [количество_дней]");
-                Str = Console.ReadLine();
-                StrList = ConvertToArray(Str).Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
-                if (StrList.Count == 3)
+                Str = Console.ReadLine() ?? string.Empty;
+                if (Str != string.Empty)
                 {
-                    bool flag = CheckFormat(StrList[0], out Statistics);
-                    if (!flag)
+                    StrList = Str.Split(" ").Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
+                    if (StrList.Count == 3)
                     {
-                        Console.WriteLine("Введите команду правильно!");
+                        bool flag = CheckFormat(StrList[0], out Statistics);
+                        if (!flag)
+                        {
+                            Console.WriteLine("Введите комунду рассчета верно!");
+                            continue;
+                        }
                         if (!CheckID(StrList[1]))
                         {
-                            Console.WriteLine("Такого id нет");
+                            Console.WriteLine("Такого id нет!");
+                            continue;
                         }
-                        if (int.Parse(StrList[2]) > 30)
+                        if (int.Parse(StrList[2]) > 30 || int.Parse(StrList[2]) < 0)
                         {
-                            Console.WriteLine("Нет статистики больше 30 дней");
+                            Console.WriteLine("Дни указаны неправильно!");
+                            continue;
                         }
-                        continue;
+                        Console.WriteLine("Данные введены верно!");
+                        switch (Statistics)
+                        {
+                            case Statistics.Ads:
+                                float str = Calculation.Ads(int.Parse(StrList[1]), int.Parse(StrList[2]));
+                                Console.WriteLine(str == float.E ? "" : str) ;
+                                break;
+                            case Statistics.Prediction:
+                                str = Calculation.SalesPrediction(int.Parse(StrList[1]), int.Parse(StrList[2]));
+                                Console.WriteLine(str == float.E ? "" : str);
+                                break;
+                            case Statistics.Demand:
+                                str = Calculation.Demand(int.Parse(StrList[1]), int.Parse(StrList[2]));
+                                Console.WriteLine(str == float.E ? "" : str);
+                                break;
+                            default:
+                                Console.WriteLine("Такой команды не существует");
+                                break;
+                        }
                     }
-                    Console.WriteLine("Все прошло успешно");
-                   
-                    switch (Statistics)
-                    {
-                        case EnumStatistics.Statistics.ads:
-                            Console.WriteLine(Calculation.Ads(int.Parse(StrList[1]), int.Parse(StrList[2])));
-                            break;
-                        case EnumStatistics.Statistics.prediction:
-                            Console.WriteLine(Calculation.SalesPrediction(int.Parse(StrList[1]), int.Parse(StrList[2])));
-                            break;
-                        case EnumStatistics.Statistics.demand:
-                            Console.WriteLine(Calculation.Demand(int.Parse(StrList[1]), int.Parse(StrList[2])));
-                            break;
-                    }
+                    else { Console.WriteLine("Введите корректно данные"); }
                 }
                 else { Console.WriteLine("Введите корректно данные"); }
             }
@@ -52,18 +63,14 @@ namespace Dal
         {
            return Calculation.CheckID(str);
         }
-        private static string[] ConvertToArray(string str)
+        private static bool CheckFormat(string str, out Statistics result)
         {
-             return str.Split(" ");
-        }
-        private static bool CheckFormat(string str, out EnumStatistics.Statistics result)
-        {
-            result = EnumStatistics.Statistics.none;
+            result = Statistics.None;
             if (string.IsNullOrEmpty(str))
             {
                 return false;
             }
-            if (Enum.TryParse(str, true, out EnumStatistics.Statistics parsedValue) && Enum.IsDefined(typeof(EnumStatistics.Statistics), parsedValue))
+            if (Enum.TryParse(str, true, out Statistics parsedValue) && Enum.IsDefined(typeof(Statistics), parsedValue))
             {
                 result = parsedValue;
                 return true;

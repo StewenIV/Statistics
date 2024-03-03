@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dal
+namespace StoreStatistics
 {
-    class EnumStatistics
-    {
         public enum Statistics
         {
-            none,
-            ads,
-            prediction,
-            demand,
+            None = 0,
+            Ads = 1,
+            Prediction = 2,
+            Demand = 3,
         }
-    }
+    
 }

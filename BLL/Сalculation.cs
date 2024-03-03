@@ -1,4 +1,6 @@
-﻿namespace Dal
+﻿using Dal;
+
+namespace BLL
 {
     public class Calculation
     {
@@ -6,54 +8,86 @@
         private static List<SeasonalityCoefficient> seasonalityCoefficients = ReceivingData.ReceivingSeasonalityCoefficient();
         public static float Ads(int id,int countDay)
         {
-            float sum = 0;
-            foreach (SaleData s in saleDatas)
+            try
             {
-                if(s.Id != id && s.Date.Day > countDay)
-                    break;
-                if(s.Stock != 0)
+                float sum = 0;
+                foreach (SaleData s in saleDatas)
                 {
-                    sum += s.Sales;
+                    if (s.Id != id && s.Date.Day > countDay)
+                        break;
+                    if (s.Stock != 0)
+                    {
+                        sum += s.Sales;
+                    }
                 }
+                return sum / countDay;
             }
-            return sum/countDay;
+            catch(Exception ex)
+            {
+                Console.WriteLine($"Что-то пошло не так в Ads: {ex.Message} ");
+                return float.E;
+            }
         }
-        public static float SalesPrediction(int id,int countDay)
+        public static float SalesPrediction(int id, int countDay)
         {
-            float Coefficient = 0;
-            float temp = Ads(countDay, id);
-            foreach (SeasonalityCoefficient s in seasonalityCoefficients) 
+            try
             {
-                if(s.Id == id)
+                float Coefficient = 0;
+                float temp = Ads(id, countDay);
+                foreach (SeasonalityCoefficient s in seasonalityCoefficients)
                 {
-                    Coefficient = s.Coefficient;
+                    if (s.Id == id)
+                    {
+                        Coefficient = s.Coefficient;
+                    }
                 }
+                return temp * countDay * Coefficient;
             }
-            return temp*countDay*Coefficient;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Что-то пошло не так в SalesPrediction: {ex.Message} ");
+                return float.E;
+            }
         }
-        public static float Demand(int id,int countDay)
+        public static float Demand(int id, int countDay)
         {
-            float res = 0;
-            float temp = SalesPrediction(countDay, id);
-            foreach (SaleData s in saleDatas)
+            try
             {
-                if (s.Id == id && s.Date.Day > countDay)
+                float res = 0;
+                float temp = SalesPrediction(id,countDay);
+                foreach (SaleData s in saleDatas)
                 {
-                    res = temp - s.Stock;
+                    if (s.Id == id)
+                    {
+                        res = temp - s.Stock;
+                    }
                 }
+                return res;
             }
-            return res;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Что-то пошло не так в Demand: {ex.Message} ");
+                return float.E;
+            }
         }
         public static bool CheckID(string str)
         {
-            foreach(SaleData s in saleDatas)
+            try
             {
-                if (s.Id == int.Parse(str))
+                foreach (SaleData s in saleDatas)
                 {
-                    return true;
+                    if (s.Id == int.Parse(str))
+                    {
+                        return true;
+                    }
                 }
+                return false;
             }
-            return false;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Что-то пошло не так про проверке ID: {ex.Message} ");
+                return false;
+            }
         }
     }
 }

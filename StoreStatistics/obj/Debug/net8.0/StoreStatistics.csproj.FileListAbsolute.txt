@@ -18,3 +18,4 @@ C:\Users\077764842\source\repos\BLL\StoreStatistics\bin\Debug\net8.0\BLL.pdb
 C:\Users\077764842\source\repos\BLL\StoreStatistics\bin\Debug\net8.0\Dal.pdb
 C:\Users\077764842\source\repos\BLL\StoreStatistics\obj\Debug\net8.0\StoreStatistics.csproj.AssemblyReference.cache
 C:\Users\077764842\source\repos\BLL\StoreStatistics\obj\Debug\net8.0\StoreSta.4E83E1D1.Up2Date
+C:\Users\077764842\source\repos\BLL\StoreStatistics\obj\Debug\net8.0\StoreStatistics.sourcelink.json

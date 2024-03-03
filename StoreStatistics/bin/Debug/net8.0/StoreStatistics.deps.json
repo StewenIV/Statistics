@@ -16,13 +16,13 @@
       },
       "BLL/1.0.0": {
         "dependencies": {
-          "Dal": "1.0.0"
+          "DAL": "1.0.0"
         },
         "runtime": {
           "BLL.dll": {}
         }
       },
-      "Dal/1.0.0": {
+      "DAL/1.0.0": {
         "runtime": {
           "Dal.dll": {}
         }
@@ -40,7 +40,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Dal/1.0.0": {
+    "DAL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
