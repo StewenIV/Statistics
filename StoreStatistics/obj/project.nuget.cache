@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MO2JOK6NuNt/6vVRb07PJcxLfKEJew5N3npRF5LvP4k4N8dv2y07I6YIYffM1/jEFYwSKxkbF1PVQhAGSG4+Gw==",
+  "dgSpecHash": "XW4GEElWySoNlTlu4VyQVhy+MSsRXgLIvUnRt0iuRPluviyAQmzY1bU62QCm1Rd9DW65V/Jm5WmYwN3hvxcmxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\077764842\\source\\repos\\BLL\\StoreStatistics\\StoreStatistics.csproj",
+  "projectFilePath": "C:\\Users\\077764842\\source\\repos\\StoreStatistics\\StoreStatistics\\StoreStatistics.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

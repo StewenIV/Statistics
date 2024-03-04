@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uKjmMhYcbMIq5HflIMCIdYc13ZpdrqMRzXiKMn4Z30tKIIcC3EziEHfNfZlIagW7gSvkRbC51Ogku8vDhGY1Zw==",
+  "dgSpecHash": "fyIphLzg1elwpxW9dp/xLgFE03Jn4TqxmPgmCg0hFLURSmU4TdLDQpbnoP6QaK7BorbdNbpW5Zhd4tmt5hPN/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\DAL.csproj",
+  "projectFilePath": "C:\\Users\\077764842\\source\\repos\\StoreStatistics\\Dal\\DAL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

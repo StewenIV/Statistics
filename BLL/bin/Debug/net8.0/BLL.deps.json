@@ -16,7 +16,7 @@
       },
       "DAL/1.0.0": {
         "runtime": {
-          "Dal.dll": {}
+          "DAL.dll": {}
         }
       }
     }

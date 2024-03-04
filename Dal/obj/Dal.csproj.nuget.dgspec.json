@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\DAL.csproj": {}
+    "C:\\Users\\077764842\\source\\repos\\StoreStatistics\\Dal\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\DAL.csproj": {
+    "C:\\Users\\077764842\\source\\repos\\StoreStatistics\\Dal\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\077764842\\source\\repos\\StoreStatistics\\Dal\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\DAL.csproj",
+        "projectPath": "C:\\Users\\077764842\\source\\repos\\StoreStatistics\\Dal\\DAL.csproj",
         "packagesPath": "C:\\Users\\077764842\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\077764842\\source\\repos\\BLL\\Dal\\obj\\",
+        "outputPath": "C:\\Users\\077764842\\source\\repos\\StoreStatistics\\Dal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

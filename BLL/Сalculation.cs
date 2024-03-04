@@ -13,7 +13,7 @@ namespace BLL
                 float sum = 0;
                 foreach (SaleData s in saleDatas)
                 {
-                    if (s.Id != id && s.Date.Day > countDay)
+                    if (s.Id != id)
                         break;
                     if (s.Stock != 0)
                     {

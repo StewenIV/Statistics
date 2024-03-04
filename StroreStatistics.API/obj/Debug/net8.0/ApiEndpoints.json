@@ -1,0 +1,65 @@
+[
+  {
+    "ContainingType": "StoreStatistics.Controllers.StoreStatisticsController",
+    "Method": "CalculateADS",
+    "RelativePath": "api/StoreStatistics/ads",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "countDay",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StoreStatistics.Controllers.StoreStatisticsController",
+    "Method": "CalculateDemand",
+    "RelativePath": "api/StoreStatistics/demand",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "countDay",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StoreStatistics.Controllers.StoreStatisticsController",
+    "Method": "CalculateSalesPrediction",
+    "RelativePath": "api/StoreStatistics/prediction",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "countDay",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreStatistics", "StoreSta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "Dal\DAL.csproj", "{27C73034-C611-4CAF-95FD-1C8211A7D41E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreStatisticsAPI", "StroreStatistics.API\StoreStatisticsAPI.csproj", "{33C1B228-984F-4660-891E-E248B1356525}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{27C73034-C611-4CAF-95FD-1C8211A7D41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27C73034-C611-4CAF-95FD-1C8211A7D41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27C73034-C611-4CAF-95FD-1C8211A7D41E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C1B228-984F-4660-891E-E248B1356525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C1B228-984F-4660-891E-E248B1356525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C1B228-984F-4660-891E-E248B1356525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C1B228-984F-4660-891E-E248B1356525}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,8 +4,8 @@ namespace Dal
 {
     public class ReceivingData
     {
-        private const string SalesFilePath = "../../../../InputData/SalesHistory.txt";
-        private const string SeasonalityFilePath = "../../../../InputData/Coef.txt";
+        private const string SalesFilePath = "../InputData/SalesHistory.txt";
+        private const string SeasonalityFilePath = "../InputData/Coef.txt";
 
         public static List<SaleData> ReceivingSalesData()
         {

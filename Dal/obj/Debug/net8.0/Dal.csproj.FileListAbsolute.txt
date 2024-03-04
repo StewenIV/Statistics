@@ -10,3 +10,15 @@ C:\Users\077764842\source\repos\BLL\Dal\obj\Debug\net8.0\refint\Dal.dll
 C:\Users\077764842\source\repos\BLL\Dal\obj\Debug\net8.0\Dal.pdb
 C:\Users\077764842\source\repos\BLL\Dal\obj\Debug\net8.0\ref\Dal.dll
 C:\Users\077764842\source\repos\BLL\Dal\obj\Debug\net8.0\Dal.sourcelink.json
+C:\Users\077764842\source\repos\StoreStatistics\DAL\bin\Debug\net8.0\DAL.deps.json
+C:\Users\077764842\source\repos\StoreStatistics\DAL\bin\Debug\net8.0\DAL.dll
+C:\Users\077764842\source\repos\StoreStatistics\DAL\bin\Debug\net8.0\DAL.pdb
+C:\Users\077764842\source\repos\StoreStatistics\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\077764842\source\repos\StoreStatistics\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+C:\Users\077764842\source\repos\StoreStatistics\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+C:\Users\077764842\source\repos\StoreStatistics\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\077764842\source\repos\StoreStatistics\DAL\obj\Debug\net8.0\DAL.sourcelink.json
+C:\Users\077764842\source\repos\StoreStatistics\DAL\obj\Debug\net8.0\DAL.dll
+C:\Users\077764842\source\repos\StoreStatistics\DAL\obj\Debug\net8.0\refint\DAL.dll
+C:\Users\077764842\source\repos\StoreStatistics\DAL\obj\Debug\net8.0\DAL.pdb
+C:\Users\077764842\source\repos\StoreStatistics\DAL\obj\Debug\net8.0\ref\DAL.dll
