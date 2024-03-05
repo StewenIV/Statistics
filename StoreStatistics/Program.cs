@@ -29,7 +29,7 @@ namespace StoreStatistics
                             Console.WriteLine("Такого id нет!");
                             continue;
                         }
-                        if (int.Parse(StrList[2]) > 30 || int.Parse(StrList[2]) < 0)
+                        if (int.Parse(StrList[2]) > Calculation.CheckCountDay(int.Parse(StrList[1])) || int.Parse(StrList[2]) < 0 )
                         {
                             Console.WriteLine("Дни указаны неправильно!");
                             continue;

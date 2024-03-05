@@ -6,27 +6,45 @@ namespace BLL
     {
         private static List<SaleData> saleDatas = ReceivingData.ReceivingSalesData();
         private static List<SeasonalityCoefficient> seasonalityCoefficients = ReceivingData.ReceivingSeasonalityCoefficient();
-        public static float Ads(int id,int countDay)
+        public static float Ads(int id, int countDay)
         {
             try
             {
-                float sum = 0;
-                foreach (SaleData s in saleDatas)
+                if (countDay > 0 && countDay <=  CheckCountDay(id))
                 {
-                    if (s.Id != id)
-                        break;
-                    if (s.Stock != 0)
+                    float sum = 0;
+                    int count = 0;
+                    foreach (SaleData s in saleDatas)
                     {
-                        sum += s.Sales;
+                        if (s.Id != id)
+                            continue;
+                        if(count == countDay)
+                            break;
+                        if (s.Stock != 0)
+                        {
+                            sum += s.Sales;
+                        }
+                        count++;
                     }
+                    return sum / countDay;
                 }
-                return sum / countDay;
+                return 0;
             }
             catch(Exception ex)
             {
                 Console.WriteLine($"Что-то пошло не так в Ads: {ex.Message} ");
                 return float.E;
             }
+        }
+        public static int CheckCountDay(int id)
+        {
+            int count = 0;
+            foreach(SaleData s in saleDatas)
+            {
+                if (s.Id == id)
+                    count++;
+            }
+            return count;
         }
         public static float SalesPrediction(int id, int countDay)
         {
@@ -39,6 +57,7 @@ namespace BLL
                     if (s.Id == id)
                     {
                         Coefficient = s.Coefficient;
+                        break;
                     }
                 }
                 return temp * countDay * Coefficient;

@@ -20,7 +20,6 @@ namespace Dal
             try
             {
                 List<SaleData> salesData = File.ReadAllLines(filePath)
-                    .Skip(1)
                     .Select(line =>
                     {
                         string[] field = line.Split(",");
@@ -52,7 +51,6 @@ namespace Dal
             try
             {
                 List<SeasonalityCoefficient> seasonalityData = File.ReadAllLines(filePath)
-                    .Skip(1)
                     .Select(line =>
                     {
                         string[] field = line.Split(",");
